@@ -6,6 +6,7 @@ int ya = 1;
 int yb = 1;
 int yc = 7;
 Console.Clear();
+
 Console.SetCursorPosition(xa, ya);
 Console.Write('+');
 Console.SetCursorPosition(xb,yb);
