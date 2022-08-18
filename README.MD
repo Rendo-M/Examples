@@ -1,8 +1,8 @@
 
 # tasks from lectures and seminars on the C# language
-    # seminar tasks:
+    # homework tasks:
         s<seminar_number>_task<task_number>
-    # lecture tasks or training tasks:
+    # lecture tasks or seminar tasks:
         ex<number>_<some_description>
 * s1_task1:
     Напишите программу, которая на вход принимает два числа и выдаёт, какое число большее, а какое меньшее.
