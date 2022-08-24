@@ -20,16 +20,20 @@ Console.WriteLine($"second digit of {num} is {GetDigitByPos(num, 2)}");
 // Напишите программу, которая выводит третью цифру заданного числа 
 // или сообщает, что третьей цифры нет.
 void ThirdDigit( int num)
-// выводит третью цифру заданного числа 
-// или сообщает, что третьей цифры нет.
-{
-    if (num < 100)
+// выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
+{   if ((num < 100)&&(num > -100))
     {
         Console.WriteLine($"No third digit in {num}");
     }
     else
     {
-      Console.WriteLine($"Third digit of {num} is {GetDigitByPos(num, 3)}");
+    int n = num;    
+    while  (Math.Abs(n / 1000) > 0)
+    {
+        n = n / 10;
+    }
+
+      Console.WriteLine($"Third digit of {num} is {Math.Abs(n % 10)}");
     }
 }
 
