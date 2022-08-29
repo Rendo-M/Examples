@@ -54,10 +54,11 @@ int [] CreateArray(int n)
     int [] arr = new int[n];
     for (int i = 0; i < n; i++)
     {
-        arr[i] = new Random().Next(0, 100);
+        Console.Write($"Enter {i+1} element: ");
+        arr[i] = Convert.ToInt32(Console.ReadLine());
     } 
     return arr;
 }
 
-int [] arr = CreateArray(new Random().Next(5, 26));
+int [] arr = CreateArray(new Random().Next(5, 10));
 PrintArray(arr);
