@@ -1,5 +1,6 @@
 
-# tasks from lectures and seminars on the C# language
+# EXAMPLES from lectures and seminars on the C# language
+
     # homework tasks:
         s<seminar_number>_task<task_number>
     # lecture tasks or seminar tasks:
