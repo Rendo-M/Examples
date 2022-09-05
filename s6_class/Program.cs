@@ -120,7 +120,7 @@ bool IsTriangle(int a, int b, int c )
 }
 
 void TestTask4(int minN, int maxN)
-{
+{   
     int a = new Random().Next(minN, maxN);
     int b = new Random().Next(minN, maxN);
     int c = new Random().Next(minN, maxN);
@@ -134,4 +134,8 @@ void TestTask4(int minN, int maxN)
 
 
 Console.Clear();
-TestTask4(2, 10);   
+
+TestTask1(4, 10, 5, 25);   
+TestTask2(5, 10);   
+TestTask3(1, 1, 4, 10);   
+TestTask4(3, 7);
