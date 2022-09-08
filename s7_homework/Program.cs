@@ -88,6 +88,7 @@ double [,] FindColumnMeans(int [,] matrix)
 
 void TestTask1()
 {   
+    Console.Clear();
     Console.Write("Enter number of rows: ");
     int rows = Convert.ToInt32(Console.ReadLine());
     Console.Write("Enter number of columns: ");
@@ -103,6 +104,7 @@ void TestTask1()
 
 void TestTask3()
 {   
+    Console.Clear();
     Console.Write("Enter number of rows: ");
     int rows = Convert.ToInt32(Console.ReadLine());
     Console.Write("Enter number of columns: ");
@@ -120,6 +122,7 @@ void TestTask3()
 
 void TestTask2()
 {   
+    Console.Clear();
     Console.Write("Enter number of rows: ");
     int rows = Convert.ToInt32(Console.ReadLine());
     Console.Write("Enter number of columns: ");
@@ -137,5 +140,20 @@ void TestTask2()
     Console.WriteLine($"Элемент в позиции [{rowNum}, {colNum}] {GetElementByPos(newArr, rowNum, colNum)}");
 }
 
+void TestTask()
+{
+    while (true)
+    {
+        Console.Write("Enter number of task to test[1..3] or 0 for exit: ");
+        string choise = Console.ReadLine();
+        if (choise == "1") TestTask1();
+        else if (choise == "2") TestTask2();
+        else if (choise == "3") TestTask3();
+        else if (choise == "0") break;
+        else Console.Write("Wrong Input");
+    }
+
+}
+
 Console.Clear();
-TestTask3();
+TestTask();
