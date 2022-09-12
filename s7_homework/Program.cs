@@ -40,10 +40,7 @@ int [,] CreateRandomMatrix(int n, int m, int minVal, int maxVal)
  return arr;
 }
 
-
-
 // Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
-
 double [,] CreateRandomDoubleMatrix(int n, int m, int minVal, int maxVal)
 {
  double [,] arr = new double[n, m];
@@ -56,7 +53,6 @@ double [,] CreateRandomDoubleMatrix(int n, int m, int minVal, int maxVal)
 
 
 // Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, и возвращает значение этого элемента или же указание, что такого элемента нет.
-
 string GetElementByPos(double [,] matrix, int row, int col)
 {
     if (matrix.GetLength(0) > row && matrix.GetLength(1) > col)
@@ -64,7 +60,6 @@ string GetElementByPos(double [,] matrix, int row, int col)
     else
         return("отсутствует");    
 }
-
 
 // Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
 double [,] FindColumnMeans(int [,] matrix)

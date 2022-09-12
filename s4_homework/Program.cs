@@ -1,5 +1,6 @@
 ﻿// Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
-int Power(int num, int n)
+
+int Power1(int num, int n)
 {   
     int pow = num;
     for (int i = 1; i < n; i++)
@@ -20,9 +21,9 @@ int Power2(int num, int n)
 
 int a = new Random().Next(0, 10);
 int b = new Random().Next(0, 10);
-Console.WriteLine($"{a} в степени {b} = {Power(b, a)}");
-
-
+Console.WriteLine($"Power1:   {a} в степени {b} = {Power1(b, a)}");
+Console.WriteLine($"Power2:   {a} в степени {b} = {Power2(b, a)}");
+Console.WriteLine($"Math.Pow: {a} в степени {b} = {Math.Pow(b, a)}");
 //Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
 int CalcDigits(int number)
 {

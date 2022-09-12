@@ -1,7 +1,5 @@
-﻿
-void PrintArray(int [] arr)
-{   
-    Console.Write($"[");
+﻿void PrintArray(int [] arr)
+{   Console.Write($"[");
     for(int i = 0; i < arr.Length; i++)
     { 
       Console.ForegroundColor = (ConsoleColor)(5 + i % 2);    
@@ -29,11 +27,13 @@ for (int j = 0; j < mx.GetLength(0); j++)
 
 int [] CreateRandomArray(int n, int minVal, int maxVal)
 {
+   
  int [] arr = new int[n];
  for (int i = 0; i < n; i++) 
      arr[i] = new Random().Next(minVal, maxVal+1);
   return arr;
 }
+
 
 int [,] CreateRandomMatrix(int n, int m, int minVal, int maxVal)
 {
@@ -43,6 +43,7 @@ int [,] CreateRandomMatrix(int n, int m, int minVal, int maxVal)
         arr[i, j] = new Random().Next(minVal, maxVal+1);   
  return arr;
 }
+
 
 
 //Задайте двумерный массив размера m на n, каждый элемент в массиве находится по формуле: Aij = i+j. Выведите полученный массив на экран.

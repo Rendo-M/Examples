@@ -78,7 +78,7 @@ int [] arr = CreateRandomArray(15, 0, 150);
 PrintArray(arr);
 Console.WriteLine(CountInRange(arr, 10, 99));
 
-/*
+
 Console.Write("Какое число ищем? ");
 int num = Convert.ToInt32(Console.ReadLine());
 if (FindElem(arr, num))
@@ -89,8 +89,7 @@ else
 
 
 
-int sum = SumNegativeElements(arr);
-Console.WriteLine($"сумма отрицательных элементов массива {sum}");
+double sum = 3.44456;
+Console.WriteLine($" {sum:f2}");
 arr = ReverseSignElemebts(arr);
 PrintArray(arr);
-*/
