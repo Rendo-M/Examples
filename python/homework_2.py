@@ -11,8 +11,7 @@ def entertext(prompt, regexp):
             print('wrong data, please repeat input')   
 
 # 1) Напишите программу, которая принимает на вход вещественное число и показывает сумму его цифр.
-def sum_of_digits(number):
-    
+def sum_of_digits(number):    
     number = abs(number)  
     num1 = int(number)
     num2 = number - num1
