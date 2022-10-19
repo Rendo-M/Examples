@@ -31,7 +31,14 @@ def Tasks123():
 # Задайте список из вещественных чисел. Напишите программу, которая найдёт разницу между максимальным и минимальным значением дробной части элементов.
     nums = list(map(lambda x: abs(x - int(x)),numbers))
     print(f'разница между макс и мин значением дробной части элементов: {max(*nums)-min(*nums)}')
-
+n = 4
+new_list = []
+for i in range(n):
+    l1 = input().split('.')
+    if len(l1) == 2:
+        new_list.append(float('0.'+l1[1]))
+dif = max(new_list)-min(new_list)
+print(f'0.{dif}')        
 
 # Напишите программу, которая будет преобразовывать десятичное число в двоичное.
 def find_max_pow(x, pow):
