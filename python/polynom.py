@@ -2,6 +2,8 @@ pows = '⁰¹²³⁴⁵⁶⁷⁸⁹'
 
 def to_pows(n):
     power = ''
+    if n == 1:
+        return ''
     txt = str(n)
     for i in txt:
         power+= pows[int(i)]
@@ -22,9 +24,13 @@ def parse_polynom(poly):
     txt = txt[0].split('+')
     coef = {}
     if 'x' not in txt[-1]:
+
         coef[0] = int(txt[-1])
         del txt[-1]
+    print(txt)        
     for i in txt:
+        if i == '':
+            continue
         a, b = i.lower().split('x')
         if a == '':
             a = 1
@@ -36,15 +42,9 @@ def parse_polynom(poly):
 def unparse_polynom(coef):
     high_pow = max(coef.keys())
     for i in range(high_pow, -1, -1):
-        coef[i] = coef.get(i,0) 
-    exp = 'x'+ to_pows(high_pow)     
-    if coef[high_pow] == 1:
-        pass
-    elif coef[high_pow] == -1:
-        exp = '-' + exp
-    else:
-        exp = str(coef[high_pow])+exp    
-    for i in range(high_pow-1, 0, -1):
+        coef[i] = coef.get(i,0)
+    exp = ''         
+    for i in range(high_pow, 0, -1):
         if coef[i] == 1:
             xp = ' + x'+ to_pows(i)
         elif coef[i] == -1:
@@ -56,7 +56,11 @@ def unparse_polynom(coef):
         exp = exp + xp
     if coef[0] != 0:
         exp = exp +' + '+str(coef[0])
-    exp = exp.replace('+ -', '- ') + ' = 0'        
+    exp = exp.replace('+ -', '- ') + ' = 0'
+    if exp[0:2] == ' +':
+        exp = exp[3:]
+    else:
+        exp = exp[1:]                
     return exp
 
 
