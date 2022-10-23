@@ -61,7 +61,7 @@ def decode_string(text):
     return result
                 
 file1 = 'in.txt'
-file2 = 'out.txt'
+file2 = 'out.bin'
 with open(file1, 'r') as f:
     txt = f.read()    
 print('текст из файла для кодирования')
@@ -71,9 +71,6 @@ print('закодированный текст:')
 txt = encode_string(txt)
 print(txt)
 print('длина закодированного текста:', len(txt))
-
-with open(file2, 'rb') as f:
-    txt = pickle.load(f)
 
 print('текст после декодирования:')
 print(decode_string(txt))
