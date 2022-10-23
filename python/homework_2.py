@@ -106,9 +106,8 @@ def test_all():
         answer = input()
 
 test_all();    
-i = decimal.Decimal(1)
-j = decimal.Decimal(3)
-print(i/j)
-decimal.getcontext().prec
-
-print(i/j)
+i = 1
+txt = f'{i}'
+i = 2
+print(i)
+q

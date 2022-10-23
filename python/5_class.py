@@ -26,6 +26,6 @@ print(answer[0])
 
 # # 3. Напишите программу, удаляющую из текста все слова, содержащие "абв".
 # text =  'абв Ура, питон крутой абвязык , очень интересные семинарабвы ДЗ! абв'
-# lst = ' '.join(list(filter(lambda s: s.count('абв') < 1 ,text.split())))
+# lst = ' '.join(list(filter(lambda s: 'абв' in s ,text.split())))
 # print(lst)
 
